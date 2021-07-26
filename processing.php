@@ -13,11 +13,11 @@ require_once("includes/classes/videoProcessor.php");
     // 1 -> create file upload data
 
     $videoUploadData = new videoUploadData(
-                                            $_POST["fileInput"],
-                                            $_POST["titleInput"]
-                                            $_POST["descriptionInput"]
-                                            $_POST["privacyInput"]
-                                            $_POST["categoryInput"]
+                                            $_FILES["fileInput"],
+                                            $_POST["titleInput"],
+                                            $_POST["descriptionInput"],
+                                            $_POST["privacyInput"],
+                                            $_POST["categoryInput"],
                                             "REPLACE_THIS"
                                             );
 
