@@ -34,10 +34,10 @@ class VideoProcessor {
 
             }
 
-            if(!this->convertVideoToMp($tempFilePath, $finalPath)){
-                echo "Upload failed \n";
-                return false;
-            }
+            // if(!this->convertVideoToMp($tempFilePath, $finalPath)){
+            //     echo "Upload failed \n";
+            //     return false;
+            // }
         }
     }
 
@@ -86,18 +86,18 @@ class VideoProcessor {
             return $query->execute();
     }
 
-    public convertVideoToMp ($tempFilePath, $finalPath){
-        $cmd = "$this->ffmpegPath -i $tempFilePath $finalPath 2>&1";
+    // private convertVideotoMp($tempFilePath, $finalPath){
+    //     $cmd = "$this->ffmpegPath -i $tempFilePath $finalPath 2>&1";
 
-        $outputLog = array();
-        exec($cmd, $outputLog, $returnCode);
+    //     $outputLog = array();
+    //     exec($cmd, $outputLog, $returnCode);
 
-        if($returnCode != 0){
-            foreach($outputLog as $line){
-                echo $line . "</br>";
-            }
-            return false;
-        }
-    }
+    //     if($returnCode != 0){
+    //         foreach($outputLog as $line){
+    //             echo $line . "</br>";
+    //         }
+    //         return false;
+    //     }
+    // }
 }
 ?>
